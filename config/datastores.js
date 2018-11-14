@@ -48,8 +48,8 @@ module.exports.datastores = {
     *    (See https://sailsjs.com/config/datastores for help.)                 *
     *                                                                          *
     ***************************************************************************/
-    adapter: 'sails-postgresql',
-    url : 'postgresql://aws_postgres:credigenio@credigenio-instance.ckp0hi9xbp6a.us-east-2.rds.amazonaws.com:5432/dbcredigenio'
+    // adapter: 'sails-postgresql',
+    // url : 'postgresql://aws_postgres:credigenio@credigenio-instance.ckp0hi9xbp6a.us-east-2.rds.amazonaws.com:5432/dbcredigenio'
 
   },
 

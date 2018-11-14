@@ -42,7 +42,7 @@ module.exports.routes = {
   '/faq': {
     view: 'pages/faq'
   },
-  'POST /create': 'LeadController.create',
+  // 'POST /create': 'LeadController.create',
 
   /***************************************************************************
   *                                                                          *
