@@ -47,8 +47,8 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     default: {
-      // adapter: 'sails-mysql',
-      // url: 'mysql://user:password@host:port/database',
+      adapter: 'sails-postgresql',
+    url : 'postgresql://aws_postgres:credigenio@credigenio-instance.ckp0hi9xbp6a.us-east-2.rds.amazonaws.com:5432/dbcredigenio'
       //--------------------------------------------------------------------------
       //  /\   To avoid checking it in to version control, you might opt to set
       //  ||   sensitive credentials like `url` using an environment variable.
