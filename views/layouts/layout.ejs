@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Plataforma digital en México para elegir la mejor opción en préstamos.">
+    <meta name="author" content="credigenio">
+    <link rel="icon" href="img/favicons/apple-touch-icon2.png">
+    <link rel="icon" href="img/favicons/favicon.ico">
+    <title>Credigenio</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Favicone Icon -->
+      <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico" />
+      <link rel="icon" type="image/png" href="/favicons/apple-touch-icon.png" />
+      <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+
+    <!-- Fonts Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/line-awesome.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <!--STYLES END-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126896973-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-126896973-1');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '150990265847229');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=150990265847229&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <!-- Image and text -->
+      <nav id="navbar-intro" class="navbar fixed-top navbar-light text-center bg-white">
+        <a class="navbar-brand font-weight-bold" href="/">
+          <img src="images/credigenio.png" alt="Credigenio">
+        </a>
+      </nav>
+    </header>
+    <%- body %>
+
+
+
+    <!--
+        Client-side Templates
+        ========================
+
+        HTML templates are important prerequisites of modern, rich client applications.
+        To work their magic, frameworks like React, Vue.js, Angular, Ember, and Backbone
+        require that you load these templates client-side.
+
+        By default, your Gruntfile is configured to automatically load and precompile
+        client-side JST templates in your `assets/templates` folder, then
+        include them here automatically (between TEMPLATES and TEMPLATES END).
+
+        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Import templates from other directories
+            + Use a different view engine (handlebars, dust, pug/jade, etc.)
+            + Internationalize your client-side templates using a server-side
+              stringfile before they're served.
+    -->
+
+    <!--TEMPLATES-->
+    
+    <!--TEMPLATES END-->
+
+
+    <!--
+        Server-side View Locals
+        ========================
+
+        Sometimes, it's convenient to get access to your server-side view locals from
+        client-side JavaScript.  This can improve page load times, remove the need for
+        extra AJAX requests, and make your client-side code easier to understand and
+        to maintain.  Sails provides a simple mechanism for accessing dynamic view
+        locals: the "exposeLocalsToBrowser()" view partial.
+
+        For more information on using this built-in feature, see:
+        https://sailsjs.com/docs/concepts/views/locals#?escaping-untrusted-data-using-exposelocalstobrowser
+
+    -->
+
+
+    <!--
+
+      Client-side Javascript
+      ========================
+
+      You can always bring in JS files manually with `script` tags, or asynchronously
+      on the client using a solution like AMD (RequireJS).  Or, if you like, you can
+      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+      By default, files in your `assets/js` folder are included here
+      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
+      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
+      and concatenated into a single file.
+
+      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+      For example, here are a few things you could do:
+
+          + Change the order of your scripts
+          + Import scripts from other directories
+          + Use a different preprocessor, like TypeScript
+
+    -->
+    <footer class="bg-black py-5">
+      <div class="container text-center">
+        <div class="row pb-40">
+          <div class="col-sm-4">
+            <ul class="list">
+              <li><a href="/loan">Préstamos personales</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4 pb-20">
+            <ul class="list">
+              <li><a href="/terms">Términos y condiciones</a></li>
+              <li><a href="/privacy">Aviso de privacidad</a></li>
+              <li><a href="/faq">Preguntas frecuentes</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4 mb-4">
+            <p>Síguenos en:</p>
+            <ul class="soc mb-20 dark-bg">
+              <li><a target="_blank" href=""><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="mt-4">2018 © credigenio.mx - Todos los derechos reservados. Al usar este sitio, aceptas nuestra política de privacidad, así como nuestros términos y condiciones.</p>
+      </div>
+    </footer>
+
+    <!--SCRIPTS-->
+    <script src="/dependencies/sails.io.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery.easing.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/scrolling-nav.js"></script>
+    <script src="/js/inputmask.js"></script>
+    <script src="/js/core.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>
