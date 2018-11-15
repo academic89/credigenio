@@ -72,13 +72,12 @@ var jsFilesToInject = [
   // All of the rest of your custom client-side js files will be injected here,
   // in no particular order.  To customize the ordering, add additional items
   // here, _above_ this one.
-  'js/jquery-3.3.1.min.js',
-  'js/jquery.easing.min.js',
-  'js/popper.min.js',
-  'js/bootstrap.min.js',
-  'js/scrolling-nav.js',
-  'js/inputmask.js',
-  'js/core.js'
+  // 'js/jquery-3.3.1.min.js',
+  // 'js/jquery.easing.min.js',
+  // 'js/popper.min.js',
+  // 'js/scrolling-nav.js',
+  // 'js/inputmask.js',
+  // 'js/core.js'
 ];
 
 

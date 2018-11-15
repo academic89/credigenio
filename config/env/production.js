@@ -47,8 +47,8 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     default: {
-      adapter: 'sails-postgresql',
-    url : 'postgresql://aws_postgres:credigenio@credigenio-instance.ckp0hi9xbp6a.us-east-2.rds.amazonaws.com:5432/dbcredigenio'
+     adapter: 'sails-postgresql',
+     url : 'postgresql://admin:credigenio1989@localhost:5432/pixeldb'
       //--------------------------------------------------------------------------
       //  /\   To avoid checking it in to version control, you might opt to set
       //  ||   sensitive credentials like `url` using an environment variable.
@@ -250,10 +250,9 @@ module.exports = {
     * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
     *                                                                          *
     ***************************************************************************/
-    // onlyAllowOrigins: [
-    //   'https://example.com',
-    //   'https://staging.example.com',
-    // ],
+    onlyAllowOrigins: [
+      
+    ],
 
 
     /***************************************************************************
