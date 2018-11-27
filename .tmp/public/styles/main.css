@@ -25,7 +25,9 @@ a{
  label{
   font-weight: 700;
  }
-
+.hidden{
+ display:none !important;
+}
  .section-padding{
   padding-top: 90px;
   padding-bottom: 90px;

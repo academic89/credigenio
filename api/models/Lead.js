@@ -31,11 +31,11 @@ module.exports = {
     },
     estatus: {
         type: 'string',
-        required: true
+        required: false
     },
     dateBirth: {
         type: 'string',
-        required: true
+        required: false
     },
     terms: {
         type: 'string', 
