@@ -72,17 +72,13 @@ var createLead = function createLead() {
             alert('Ingresa un correo electrónico válido');
         } else if (account == undefined) {
             alert('Selecciona si cuentas o no con cuenta bancaría o de ahorro');
-        } else if (estatus == null) {
-            alert('Selecciona una opción de estatus');
-        } else if (birth == '') {
-            alert('Ingresa tu fecha de nacimiento');
         } else if (!$("#terms").prop("checked")) {
             alert('Debes aceptar los Términos y condiciones');
         } else if (!$("#privacy").prop("checked")) {
             alert('Debes aceptar El aviso de privacidad');
         } else {
             $.ajax({
-                url: 'http://localhost:1337/create/?',
+                url: 'https://credigenio.mx/create/?',
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({
@@ -91,8 +87,8 @@ var createLead = function createLead() {
                     phone: phone,
                     email: email,
                     cuenta: account,
-                    estatus: estatus,
-                    dateBirth: birth,
+                    estatus: 'null',
+                    dateBirth: 'null',
                     terms: terms,
                     privacy: privacy,
                     dateRegister: dateRegister,
@@ -102,6 +98,7 @@ var createLead = function createLead() {
                     alert('error en el servicio');
                 },
                 success: function success(data, textStatus, jQxhr) {
+                    document.getElementById("form-lead").reset();
                     $('#exampleModalCenter').modal({
                         backdrop: false,
                         show: true
