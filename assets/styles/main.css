@@ -337,7 +337,7 @@ ul.list-group-flush li::before {
 .alert-c{
   display: none;
 }
-.kueski{
+.kueski, .kueski-row{
   display: none;
 }
 .card-form{
@@ -715,6 +715,16 @@ footer p{
 }
 
 /*   E X I T       F O R M S  */
+
+.credy{
+  width: 35%!important;
+}
+
+@media (min-width: 768px){
+  .credy{
+    width: 45%!important;
+  }
+}
 
 .spinner {
   animation: rotator 1.4s linear infinite;

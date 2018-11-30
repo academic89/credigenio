@@ -49,7 +49,8 @@ module.exports.datastores = {
     *                                                                          *
     ***************************************************************************/
     adapter: 'sails-postgresql',
-    url : 'postgresql://postgres:postgres@localhost:5432/pixeldb'
+    url : 'postgresql://postgres:postgres@localhost:5432/ArrynLoans'
+    //url : 'postgresql://postgres:postgres@localhost:5432/pixeldb'
 
   },
 
