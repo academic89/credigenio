@@ -78,8 +78,8 @@ var createLead = function(){
             alert('Debes aceptar El aviso de privacidad')
         } else {
             $.ajax({ 
-		        //url:'https://credigenio.mx/create/?',
-                url:'http://localhost:1337/create/?',  
+		url:'https://credigenio.mx/create/?',
+                //url:'http://localhost:1337/create/?',  
                 type: 'POST', 
                 contentType: 'application/json', 
                 data: JSON.stringify({ 
@@ -107,6 +107,7 @@ var createLead = function(){
                     $('.modal').css('background','rgba(0,0,0,0.5)');
                     setTimeout(function(){
                         $('.spinner').fadeOut('slow');
+			fbq('track', 'Lead');
                         setTimeout(function(){
                             $('.fa-check-circle').fadeIn('slow');
                             $('#msg').text('¡Hemos encontrado tu mejor opción!');
