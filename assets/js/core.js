@@ -109,19 +109,19 @@ var createLead = function(){
                         $('.spinner').fadeOut('slow');
 			            fbq('track', 'CompleteRegistration');
                         setTimeout(function(){
-                            $('.fa-check-circle').fadeIn('slow');
+                            // $('.fa-check-circle').fadeIn('slow');
                             $('#msg').text('¡Hemos encontrado tu mejor opción!');
 
                             setTimeout(function(){
-                                $('.fa-check-circle').fadeOut();
+                                // $('.fa-check-circle').fadeOut();
                                 $('#msg').fadeOut();
                                 setTimeout(function(){
                                     $('.kueski').fadeIn('slow');
                                     $('.kueski-row').css('display','flex');
-                                },500)
-                            },500)
-                        },800);
-                    },4000);
+                                },100)
+                            },100)
+                        },100);
+                    },500);
                 }
             }); 
         }
