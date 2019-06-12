@@ -107,7 +107,7 @@ var createLead = function(){
                     $('.modal').css('background','rgba(0,0,0,0.5)');
                     setTimeout(function(){
                         $('.spinner').fadeOut('slow');
-			fbq('track', 'Lead');
+			            fbq('track', 'CompleteRegistration');
                         setTimeout(function(){
                             $('.fa-check-circle').fadeIn('slow');
                             $('#msg').text('¡Hemos encontrado tu mejor opción!');
