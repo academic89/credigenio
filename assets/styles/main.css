@@ -347,6 +347,7 @@ ul.list-group-flush li::before {
   min-height: 40px;
 }
 
+
 .radio-tile-group {
     display: flex;
     flex-wrap: wrap;
@@ -355,14 +356,14 @@ ul.list-group-flush li::before {
 
 .radio-tile-group .input-container {
     position: relative;
-    height: 2.5rem;
-    width: 6rem;
+    height: 5rem;
+    width: 8rem;
     margin: 0.5rem;
 }
 .radio-tile-group .input-container.checkbox {
     position: relative;
-    height: 2.5rem;
-    width: 6rem;
+    height: 3rem;
+    width: 8rem;
     margin: 0.5rem;
 }
 

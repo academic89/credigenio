@@ -18,7 +18,6 @@ $('#money').inputmask("numeric", {
     oncleared: function () { self.Value(''); }
 });
 
-
 $('.btn-next').click(function(){
     let url = $(this).data('url');
     let pathname = window.location.pathname;
@@ -32,12 +31,50 @@ $('.btn-next').click(function(){
             } else if(!check2){
                 alert("selecciona si puedes comprobar tus ingresos") 
             } else {
-                console.log('success to', url);
+                window.location.pathname = url;
+            }
+            break;
+        case '/step3':
+            let check3 = $('input[name="radio"]').is(':checked');
+            if(!check3) {
+                alert('selecciona un estatus laboral')
+            } else {
+               window.location.pathname = url; 
+            }
+            break;
+        case '/step4':
+            let check4 = $('input[name="radio"]').is(':checked');
+            if(!check4) {
+                alert('selecciona una opción')
+            } else {
+               window.location.pathname = url; 
+            }
+            break;
+        case '/step6':
+            let terms = $('input#terms').val();
+            let privacy = $('input#terms').val();
+            if(!$("#terms").prop("checked")){
+                alert('Debes aceptar los Términos y condiciones');
+            } else if(!$("#privacy").prop("checked")){
+                alert('Debes aceptar el Aviso de privacidad');
+            } else {
+                window.location.pathname = url; 
             }
             break;
     }
     
 })
+
+$('input.cbx[type=checkbox]').click(function(){
+  let valCheck = $('input.cbx[type=checkbox]').is(':checked');
+  if (valCheck) {
+      $('.hidden-box').fadeIn('slow');
+      $('#textInfo').fadeOut('slow');
+  }else{
+      $('.hidden-box').fadeOut();
+      $('#textInfo').fadeIn();
+  };
+});
 
 
 var createLead = function(){
