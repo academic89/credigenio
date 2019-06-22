@@ -18,6 +18,28 @@ $('#money').inputmask("numeric", {
     oncleared: function () { self.Value(''); }
 });
 
+
+$('.btn-next').click(function(){
+    let url = $(this).data('url');
+    let pathname = window.location.pathname;
+
+    switch (pathname) {
+        case '/step2':
+            let check = $('input[name="radio"]').is(':checked');
+            let check2 = $('input[name="radio2"]').is(':checked');
+            if(!check) { 
+                alert("selecciona un ingreso mensual") 
+            } else if(!check2){
+                alert("selecciona si puedes comprobar tus ingresos") 
+            } else {
+                console.log('success to', url);
+            }
+            break;
+    }
+    
+})
+
+
 var createLead = function(){
 
     $('#form-lead').submit(function(event){
@@ -48,7 +70,7 @@ var createLead = function(){
             phone = $('#phone').val(),
             email = $('#email').val(),
             account = $('input[name=cuenta]:checked').val(),
-            estatus = $('#estatus').val(),
+            estatus = $('input#estatus').val(),
             birth = $('#birth').val(),
             terms = $('input#terms').val(),
             privacy = $('input#privacy').val(),
@@ -56,13 +78,9 @@ var createLead = function(){
             dateHour = hourFull,
             emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-            
+          
         //Validations Form
-        if(monto == '' || monto == '$'){
-            alert('Ingresa una cantidad válida')
-        } else if(plazo == null) {
-            alert('Selecciona un plazo')
-        } else if(phone == '') {
+        if(phone == '') {
             alert('Ingresa un teléfono válido')
         } else if(phone.length < 10){
             alert('tu telefono debe ser de 10 dígitos'); 
@@ -70,28 +88,22 @@ var createLead = function(){
             alert('Ingresa un correo electrónico válido')
         } else if(emailRegex.test(email) == false) {
             alert('Ingresa un correo electrónico válido')
-        } else if(account == undefined){
-            alert('Selecciona si cuentas o no con cuenta bancaría o de ahorro')
-        } else if(!$("#terms").prop("checked")){
-            alert('Debes aceptar los Términos y condiciones')
-        } else if(!$("#privacy").prop("checked")) {
-            alert('Debes aceptar El aviso de privacidad')
         } else {
             $.ajax({ 
-		url:'https://credigenio.mx/create/?',
+		        url:'https://credigenio.mx/create/?',
                 //url:'http://localhost:1337/create/?',  
                 type: 'POST', 
                 contentType: 'application/json', 
                 data: JSON.stringify({ 
-                    monto: monto,
-                    plazo: plazo,
+                    monto: '$1,000',
+                    plazo: '15 dias',
                     phone: phone,
                     email: email,
-                    cuenta: account,
+                    cuenta: 'Si',
                     estatus: 'null',
                     dateBirth: 'null',
-                    terms: terms,
-                    privacy: privacy,
+                    terms: 'true',
+                    privacy: 'true',
                     dateRegister: dateRegister,
                     hourRegister: dateHour
                 }), 
@@ -99,29 +111,12 @@ var createLead = function(){
                   alert('error en el servicio');  
               }, 
               success: function(data, textStatus, jQxhr){
-		    document.getElementById("form-lead").reset();
-                    $('#exampleModalCenter').modal({
-                        backdrop: false,
-                        show: true
-                    }); 
-                    $('.modal').css('background','rgba(0,0,0,0.5)');
-                    setTimeout(function(){
-                        $('.spinner').fadeOut('slow');
-			            fbq('track', 'CompleteRegistration');
-                        setTimeout(function(){
-                            // $('.fa-check-circle').fadeIn('slow');
-                            $('#msg').text('¡Hemos encontrado tu mejor opción!');
+                  fbq('track', 'CompleteRegistration');
+                  setTimeout(function(){
+                    window.location.pathname = '/step2';
+                  }, 800);
+                  
 
-                            setTimeout(function(){
-                                // $('.fa-check-circle').fadeOut();
-                                $('#msg').fadeOut();
-                                setTimeout(function(){
-                                    $('.kueski').fadeIn('slow');
-                                    $('.kueski-row').css('display','flex');
-                                },100)
-                            },100)
-                        },100);
-                    },500);
                 }
             }); 
         }

@@ -30,6 +30,9 @@ module.exports.routes = {
   '/step1': {
     view: 'pages/step1'
   },
+  '/step2': {
+    view: 'pages/step2'
+  },
   '/loan': {
     view: 'pages/loan'
   },

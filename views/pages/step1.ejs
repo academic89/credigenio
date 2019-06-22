@@ -9,33 +9,11 @@
 					<div class="content p-4">
 						<h1 class="h6 font-weight-bold text-purple">Sin importar tus respuestas, encontraremos un préstamo para ti. Responde honestamente a estas preguntas</h1>
 						<hr>
-						<h2 class="font-weight-bold text-blue h4 mb-4">Solicita tu préstamo</h2>
+						<h2 class="font-weight-bold text-blue h4 mb-0">Datos generales</h2>
+						<p class="small">Ingresa tu número celular a 10 dígitos, tu correo electrónico y haz clic en <span class="font-weight-bold text-warning">Siguiente</span></p>
 						
 						<form id="form-lead">
 							<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label for="">¿Cuánto dinero necesitas?</label>
-										<input type="tel" maxlength="10" class="form-control btn-rounded" id="money" placeholder="$0.00" onkeyup="onlyNumber()" >
-										<small id="" class="form-text text-warning alert-c" >Campo incorrecto.</small>
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label for="">¿A cuánto tiempo lo quieres pagar?</label>
-										<select id="plazo" class="form-control">
-											<option value disabled selected>Selecciona una opción</option>
-											<option value="7 dias">7 días</option>
-											<option value="15 dias">15 días</option>
-											<option value="30 dias">30 días</option>
-											<option value="45 dias">45 días</option>
-											<option value="60 dias">60 días</option>
-											<option value="90 dias">90 días</option>
-											<option value="120 dias">120 días</option>
-										</select>
-										<small id="" class="form-text text-warning alert-c" >Campo incorrecto.</small>
-									</div>
-								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
 										<label for="">Teléfono celular</label>
@@ -50,64 +28,11 @@
 										<small id="" class="form-text text-warning alert-c">Campo incorrecto. Ingresa un correo válido</small>
 									</div>
 								</div>
-								<div class="col-sm-6">
-									<h6 class="font-weight-bold">¿Tiene cuenta bancaria o caja de ahorro?</h6>
-									<div class="radio-tile-group text-center mb-4">
-
-										<div class="input-container checkbox">
-											<input class="radio-button" type="radio" name="cuenta" value="Si" />
-											<div class="radio-tile">
-												<label for="walk" class="radio-tile-label bolean">Sí</label>
-											</div>
-										</div>
-										<div class="input-container checkbox">
-											<input class="radio-button" type="radio" name="cuenta" value="No" />
-											<div class="radio-tile">
-												<label for="walk" class="radio-tile-label bolean">No</label>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 hidden">
-									<div class="form-group">
-										<label for="">¿Cuál es su estatus laboral actualmente?</label>
-										<select id="estatus" class="form-control">
-											<option value disabled selected>Selecciona una opción</option>
-											<option value="Empleado">Empleado</option>
-											<option value="Independiente">Independiente</option>
-											<option value="Desempleado">Desempleado</option>
-											<option value="Estudiante">Estudiante</option>
-											<option value="Tengo una empresa">Tengo una empresa</option>
-										</select>
-										<small id="" class="form-text text-warning alert-c">Campo incorrecto. Ingresa un correo válido</small>
-									</div>
-								</div>
-								<div class="col-sm-12 hidden">
-									<div class="form-group">
-										<label for="">Fecha de nacimiento</label>
-										<input id="birth" class="form-control" type="date" placeholder="dd-mm-aaaa">
-										<small id="" class="form-text text-warning alert-c">Campo incorrecto. Ingresa un correo válido</small>
-									</div>
-								</div>
-
-								<div class="col-sm-12">
-									<hr>
-									<label class="control control--checkbox">Acepto los términos y condiciones del servicio
-										<input id="terms" type="checkbox" class="check-m" value="true" />
-										<div class="control__indicator"></div>
-									</label>
-								</div>
-								<div class="col-sm-12">
-									<label class="control control--checkbox">Acepto el Aviso de privacidad
-										<input id="privacy" type="checkbox" class="check-m" value="true" />
-										<div class="control__indicator"></div>
-									</label>
-								</div>
 							</div>
 							<hr>
 							<div class="row justify-content-center">
 								<div class="col-sm-5 mb-3">
-									<button id="finish" type="submit" class="btn btn-warning btn-rounded font-weight-bold btn-block"  >Finalizar <i class="fas fa-angle-double-right ml-2"></i></button>
+									<button id="finish" type="submit" class="btn btn-warning btn-rounded font-weight-bold btn-block"  >Siguiente <i class="fas fa-angle-double-right ml-2"></i></button>
 								</div>
 							</div>
 						</form>
@@ -118,131 +43,5 @@
 	</div>
 </section>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header ">
-        <h5 class="modal-title font-weight-bold text-center w-100" id="exampleModalCenterTitle">¡Gracias por aplicar!</h5>
-      </div>
-      <div class="modal-body text-center">
-      	<svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-		   <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
-		</svg>
-		<i id="success" class="fas fa-check-circle fa-5x text-success"></i>
-       <p id="msg" class="mt-3">Estamos buscando las mejor opción para ti...</p>
-       <p class="font-weight-bold kueski">Cumples con los requisitos para obtener tu préstamo de las siguientes opciones:</p>
-       <div class="row py-2 kueski-row">
-       	<div class="col-sm-6">
-       		<p class="text-center mb-0">
-	       		<img class="kueski mb-4 mb-md-0" src="images/kueski.png" alt="Kueski">
-	       </p>
-	       <span class="badge badge-success">Préstamo</span>
-       	</div>
-       	<div class="col-sm-6">
-       		<p class="text-center mb-md-0 mt-3">	
-	       		<a target="_blank" href="https://ojo7.ltroute.com/click.track?CID=411912&AFID=428585" class="btn btn-warning btn-rounded font-weight-bold px-4 kueski">Aplicar ahora <i class="fas fa-angle-double-right ml-2"></i></a>
-	       </p>
-       	</div>
-       </div>
-       <hr class="kueski">
-       <div class="row py-2 kueski-row">
-       	<div class="col-sm-6">
-       		<p class="text-center mb-0">
-	       		<img class="kueski mb-4 mb-md-0" src="images/dineria.jpg" alt="Dineria">
-	       </p>
-	       <span class="badge badge-success">Préstamo</span>
-       	</div>
-       	<div class="col-sm-6">
-       		<p class="text-center mb-md-0 mt-3">	
-	       		<a target="_blank" href="https://ojo7.ltroute.com/click.track?CID=426227&AFID=428585" class="btn btn-warning btn-rounded font-weight-bold px-4 kueski">Aplicar ahora <i class="fas fa-angle-double-right ml-2"></i></a>
-	       </p>
-       	</div>
-       </div>
-       <!-- <hr class="kueski">
-       <div class="row py-2 kueski-row">
-       	<div class="col-sm-6">
-       		<p class="text-center mb-0">
-	       		<img class="kueski mb-4 mb-md-0" src="images/lime.png" alt="Lime">
-	       </p>
-	       <span class="badge badge-success">Préstamo</span>
-       	</div>
-       	<div class="col-sm-6">
-       		<p class="text-center mb-md-0 mt-3">	
-	       		<a target="_blank" href="https://ojo7.ltroute.com/click.track?CID=426193&AFID=428585" class="btn btn-warning btn-rounded font-weight-bold px-4 kueski">Aplicar ahora <i class="fas fa-angle-double-right ml-2"></i></a>
-	       </p>
-       	</div>
-       </div> -->
-       <hr class="kueski">
-       <div class="row py-2 kueski-row">
-       	<div class="col-sm-6">
-       		<p class="text-center mb-0">
-	       		<img class="kueski mb-4 mb-md-0" src="images/vivus.png" alt="Vivus">
-	       </p>
-	       <span class="badge badge-success">Préstamo</span>
-       	</div>
-       	<div class="col-sm-6">
-       		<p class="text-center mb-md-0 mt-3">	
-	       		<a target="_blank" href="https://ojo7.ltroute.com/click.track?CID=418396&AFID=428585" class="btn btn-warning btn-rounded font-weight-bold px-4 kueski">Aplicar ahora <i class="fas fa-angle-double-right ml-2"></i></a>
-	       </p>
-       	</div>
-       </div>
-       <!-- <div class="row py-4 kueski-row">
-       	<div class="col-sm-6">
-       		<p class="text-center mb-0">
-	       	<img class="credy mb-4 mb-md-0 kueski" src="images/moneyman.png" alt="Credy">
-	       </p>
-       	</div>
-       	<div class="col-sm-6">
-       		<p class="text-center mb-md-0">	
-	       		<a target="_blank" href="https://offer.adgoals.net/pyebcmcu" class="btn btn-warning btn-rounded font-weight-bold px-4 kueski">Aplicar ahora <i class="fas fa-angle-double-right ml-2"></i></a>
-	       </p>
-       	</div>
-       </div> -->
-       <!-- <div class="row pt-2 pb-4 kueski-row">
-       	<div class="col-sm-6">
-       	   <p class="text-center mb-0">
-	       	<img class="credy mb-4 mb-md-0 kueski" src="images/citibanamex.png" alt="Crédito Zen">
-	       </p>
-	       <span class="badge badge-primary">Tarjeta de crédito</span>
-       	</div>
-       	<div class="col-sm-6">
-       		<p class="text-center mb-md-0 mt-4">	
-	       		<a target="_blank" href="http://ntvn.io/QQkyH" class="btn btn-warning btn-rounded font-weight-bold px-4 kueski">Aplicar ahora <i class="fas fa-angle-double-right ml-2"></i></a>
-	       </p>
-       	</div>
-       </div> -->
-       <!-- <div class="row py-4 kueski-row">
-       	<div class="col-sm-6">
-       		<p class="text-center mb-0">
-	       	<img class="credy mb-4 mb-md-0 kueski" src="images/credy.png" alt="Credy">
-	       </p>
-       	</div>
-       	<div class="col-sm-6">
-       		<p class="text-center mb-md-0">	
-	       		<a target="_blank" href="https://bit.ly/2HHlDnT" class="btn btn-warning btn-rounded font-weight-bold px-4 kueski">Aplicar ahora <i class="fas fa-angle-double-right ml-2"></i></a>
-	       </p>
-       	</div>
-       </div> -->
-       <!-- <div class="row py-4 kueski-row ">
-       	<div class="col-sm-6">
-       		<p class="text-center mb-0">
-	       	<img class="credy mb-4 mb-md-0 kueski" src="images/kreditiweb.png" alt="Kreditiweb">
-	       </p>
-       	</div>
-       	<div class="col-sm-6">
-       		<p class="text-center mb-md-0">	
-	       		<a  target="_blank" href="https://online.adservicemedia.dk/cgi-bin/click.pl?bid=1118042&media_id=0&sub=pixeldynamic" class="btn btn-warning btn-rounded font-weight-bold px-4 kueski">Aplicar ahora <i class="fas fa-angle-double-right ml-2"></i></a>
-	       </p>
-       	</div>
-       </div> -->
-       
-       
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="overlay"></div>
 
 
