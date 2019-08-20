@@ -148,12 +148,13 @@ var createLead = function(){
                   alert('error en el servicio');  
               }, 
               success: function(data, textStatus, jQxhr){
-                  fbq('track', 'CompleteRegistration');
-                  setTimeout(function(){
-                    window.location.pathname = '/step2';
-                  }, 800);
-                  
-
+                  if(data.success) {
+                    fbq('track', 'CompleteRegistration');
+                    setTimeout(function(){
+                        window.location.pathname = '/step2';
+                    }, 800);
+                  }
+                  console.log(data);
                 }
             }); 
         }
