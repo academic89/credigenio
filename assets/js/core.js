@@ -149,13 +149,13 @@ var createLead = function(){
               }, 
               success: function(data, textStatus, jQxhr){
                   if(data.success) {
-                      console.log('correcto')
+                    console.log('correcto')
                     fbq('track', 'CompleteRegistration');
                   }
                   console.log(data);
-                //   setTimeout(function(){
-                //     window.location.pathname = '/step2';
-                //     }, 800);
+                  setTimeout(function(){
+                    window.location.pathname = '/step2';
+                    }, 800);
                 }
             }); 
         }
