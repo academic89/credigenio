@@ -150,11 +150,11 @@ var createLead = function(){
               success: function(data, textStatus, jQxhr){
                   if(data.success) {
                     fbq('track', 'CompleteRegistration');
-                    setTimeout(function(){
-                        window.location.pathname = '/step2';
-                    }, 800);
                   }
                   console.log(data);
+                  setTimeout(function(){
+                    window.location.pathname = '/step2';
+                    }, 800);
                 }
             }); 
         }
