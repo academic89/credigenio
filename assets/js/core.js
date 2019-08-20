@@ -151,8 +151,10 @@ var createLead = function(){
                   if(data.success) {
                     console.log('correcto')
                     fbq('track', 'CompleteRegistration');
-                  }
-                  console.log(data);
+                  } else {
+                    console.log('duplicado')
+                  };
+                  
                   setTimeout(function(){
                     window.location.pathname = '/step2';
                     }, 800);
