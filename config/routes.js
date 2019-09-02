@@ -60,6 +60,9 @@ module.exports.routes = {
   '/faq': {
     view: 'pages/faq'
   },
+  '/ofertas': {
+    view: 'pages/landing'
+  },
   'POST /create': 'LeadController.create',
 
   /***************************************************************************
