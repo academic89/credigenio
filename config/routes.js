@@ -63,6 +63,9 @@ module.exports.routes = {
   '/ofertas': {
     view: 'pages/landing'
   },
+  '/inicio': {
+    view: 'pages/landing2'
+  },
   'POST /create': 'LeadController.create',
 
   /***************************************************************************

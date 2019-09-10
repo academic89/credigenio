@@ -58,10 +58,19 @@ a{
   min-height: 75vh;
 }
 .h50{
-  min-height: 50vh;
+  min-height: 35vh;
 }
 .h40{
-  min-height: 40vh;
+  min-height: 35vh;
+}
+
+@media(min-width: 992px) {
+  .h50{
+    min-height: 35vh;
+  }
+  .h40{
+    min-height: 40vh;
+  }
 }
 
 /*   S T Y L E S    B A C K G R O U N D S       */
@@ -109,6 +118,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 }
 .bg-loan{
   background: url(../images/loan.jpg) center no-repeat;
+  background-size: cover;
+}
+.bg-loan-app{
+  background: url(../images/bg-loan.jpg) center no-repeat;
   background-size: cover;
 }
 .bg-about{
