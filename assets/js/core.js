@@ -150,7 +150,7 @@ var createLead = function(){
               success: function(data, textStatus, jQxhr){
                   if(data.success) {
                     console.log('correcto')
-                    fbq('track', 'CompleteRegistration');
+                    fbq('track', 'Lead');
                   } else {
                     console.log('duplicado')
                   };
