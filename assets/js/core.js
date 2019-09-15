@@ -127,8 +127,8 @@ var createLead = function(){
             alert('Ingresa un correo electrónico válido')
         } else {
             $.ajax({ 
-		        //url:'https://credigenio.mx/create/?',
-                url:'http://localhost:1337/create/?',  
+		        url:'https://credigenio.mx/create/?',
+                //url:'http://localhost:1337/create/?',  
                 type: 'POST', 
                 contentType: 'application/json', 
                 data: JSON.stringify({ 
