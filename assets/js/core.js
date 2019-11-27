@@ -152,6 +152,7 @@ var createLead = function(){
                     console.log('correcto')
                    
                     fbq('track','Lead');
+                    fbq('track', 'Purchase');
                   } else {
                     console.log('duplicado')
                   };
