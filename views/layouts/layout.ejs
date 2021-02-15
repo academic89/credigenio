@@ -1,62 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-    <meta
-      name="description"
-      content="Plataforma digital en México para elegir la mejor opción en préstamos."
-    />
-    <meta name="author" content="credigenio" />
-    <link rel="icon" href="img/favicons/apple-touch-icon2.png" />
-    <link rel="icon" href="img/favicons/favicon.ico" />
-    <title>Credigenio</title>
 
-    <!-- Viewport mobile tag for sensible mobile support -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-    <!-- Favicone Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" href="/apple-touch-icon.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description" content="Plataforma digital en México para elegir la mejor opción en préstamos." />
+  <meta name="author" content="credigenio" />
+  <link rel="icon" href="img/favicons/apple-touch-icon2.png" />
+  <link rel="icon" href="img/favicons/favicon.ico" />
+  <title>Credigenio</title>
+  <meta name="facebook-domain-verification" content="zrcb27d0wlv1j9l0kylz45ob8brmlj" />
 
-    <!-- Fonts Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
-      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
-      crossorigin="anonymous"
-    />
+  <!-- Viewport mobile tag for sensible mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <!-- Favicone Icon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" href="/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!--STYLES-->
-    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
-    <link rel="stylesheet" href="/styles/importer.css" />
-    <link rel="stylesheet" href="/styles/line-awesome.css" />
-    <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/themify-icons.css" />
-    <!--STYLES END-->
-    <link rel="stylesheet" href="/styles/main.css?v=1.0" />
+  <!-- Fonts Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+    integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-126896973-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+  <!--STYLES-->
+  <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+  <link rel="stylesheet" href="/styles/importer.css" />
+  <link rel="stylesheet" href="/styles/line-awesome.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/themify-icons.css" />
+  <!--STYLES END-->
+  <link rel="stylesheet" href="/styles/main.css?v=1.0" />
 
-      gtag("config", "UA-126896973-1");
-    </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126896973-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
+    gtag("config", "UA-126896973-1");
+  </script>
     <!-- Facebook Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)
@@ -76,19 +61,49 @@
     <!-- End Facebook Pixel Code -->
   </head>
 
-  <body>
-    <header>
-      <!-- Image and text -->
-      <nav
-        id="navbar-intro"
-        class="navbar fixed-top navbar-light text-center bg-white"
-      >
-        <a class="navbar-brand font-weight-bold" href="/">
-          <img src="images/credigenio.png" alt="Credigenio" />
-        </a>
-      </nav>
-    </header>
-    <%- body %>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(
+      window,
+      document,
+      "script",
+      "https://connect.facebook.net/en_US/fbevents.js"
+    );
+    fbq("init", "2772980609391273");
+    fbq("track", "PageView");
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2772980609391273&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+  <header>
+    <!-- Image and text -->
+    <nav id="navbar-intro" class="navbar fixed-top navbar-light text-center bg-white">
+      <a class="navbar-brand font-weight-bold" href="/">
+        <img src="images/credigenio.png" alt="Credigenio" />
+      </a>
+    </nav>
+  </header>
+  <%- body %>
 
     <!--
         Client-side Templates
@@ -171,9 +186,7 @@
             <p>Síguenos en:</p>
             <ul class="soc mb-20 dark-bg">
               <li>
-                <a target="_blank" href="https://www.facebook.com/credigeniomx"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
+                <a target="_blank" href="https://www.facebook.com/credigeniomx"><i class="fab fa-facebook-f"></i></a>
               </li>
             </ul>
           </div>
@@ -192,19 +205,16 @@
 
     <script src="/dependencies/sails.io.js"></script>
     <script src="/js/jquery-3.3.1.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
       integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script src="/js/jquery.easing.min.js"></script>
     <script src="/js/scrolling-nav.js"></script>
     <script src="/js/inputmask.js"></script>
     <script src="/js/core.js"></script>
-  </body>
+</body>
+
 </html>
