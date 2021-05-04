@@ -1,4 +1,4 @@
-var onlyNumber = function() {
+var onlyNumber = function () {
   var e = document.getElementById("phone");
 
   if (!/^[0-9]+$/.test(e.value)) {
@@ -14,12 +14,12 @@ $("#money").inputmask("numeric", {
   autoGroup: true,
   prefix: "$", //No Space, this will truncate the first character
   rightAlign: false,
-  oncleared: function() {
+  oncleared: function () {
     self.Value("");
   }
 });
 
-$(".btn-next").click(function() {
+$(".btn-next").click(function () {
   let url = $(this).data("url");
   let pathname = window.location.pathname;
 
@@ -65,7 +65,7 @@ $(".btn-next").click(function() {
   }
 });
 
-$("input.cbx[type=checkbox]").click(function() {
+$("input.cbx[type=checkbox]").click(function () {
   let valCheck = $("input.cbx[type=checkbox]").is(":checked");
   if (valCheck) {
     $(".hidden-box").fadeIn("slow");
@@ -76,8 +76,8 @@ $("input.cbx[type=checkbox]").click(function() {
   }
 });
 
-var createLead = function() {
-  $("#form-lead").submit(function(event) {
+var createLead = function () {
+  $("#form-lead").submit(function (event) {
     event.preventDefault();
 
     var date = new Date();
@@ -120,6 +120,11 @@ var createLead = function() {
       alert("Ingresa un correo electrónico válido");
     } else if (emailRegex.test(email) == false) {
       alert("Ingresa un correo electrónico válido");
+    }
+    if (!$("#terms").prop("checked")) {
+      alert("Debes aceptar los Términos y condiciones");
+    } else if (!$("#privacy").prop("checked")) {
+      alert("Debes aceptar el Aviso de privacidad");
     } else {
       $.ajax({
         url: "https://credigenio.mx/create/?",
@@ -139,10 +144,10 @@ var createLead = function() {
           dateRegister: dateRegister,
           hourRegister: dateHour
         }),
-        error: function(jqXhr, textStatus, errorThrown) {
+        error: function (jqXhr, textStatus, errorThrown) {
           alert("error en el servicio");
         },
-        success: function(data, textStatus, jQxhr) {
+        success: function (data, textStatus, jQxhr) {
           if (data.success) {
             console.log("correcto");
 
@@ -151,8 +156,8 @@ var createLead = function() {
             console.log("duplicado");
           }
 
-          setTimeout(function() {
-            window.location.pathname = "/step2";
+          setTimeout(function () {
+            window.location.pathname = "/results";
           }, 800);
         }
       });
@@ -160,6 +165,6 @@ var createLead = function() {
   });
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
   createLead();
 });
