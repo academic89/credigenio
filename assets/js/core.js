@@ -120,8 +120,7 @@ var createLead = function () {
       alert("Ingresa un correo electrónico válido");
     } else if (emailRegex.test(email) == false) {
       alert("Ingresa un correo electrónico válido");
-    }
-    if (!$("#terms").prop("checked")) {
+    } else if (!$("#terms").prop("checked")) {
       alert("Debes aceptar los Términos y condiciones");
     } else if (!$("#privacy").prop("checked")) {
       alert("Debes aceptar el Aviso de privacidad");
